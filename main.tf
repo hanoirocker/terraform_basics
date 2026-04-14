@@ -7,16 +7,16 @@ terraform {
   }
 }
 
-# Configuración del proveedor
+# Provider configuration
 provider "docker" {}
 
-# 1. Definir la imagen de Nginx
+# 1. Define the Nginx image
 resource "docker_image" "nginx" {
   name         = "nginx:latest"
   keep_locally = false
 }
 
-# 2. Crear el contenedor usando esa imagen
+# 2. Create the container using that image
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
   name  = var.container_name

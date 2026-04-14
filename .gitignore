@@ -5,7 +5,7 @@
 .terraform/
 .terraform.lock.hcl
 
-# Estado local — contiene info sensible, no versionar
+# Local state — contains sensitive info, do not version
 *.tfstate
 *.tfstate.*
 *.tfstate.backup
@@ -14,7 +14,7 @@
 *.tfplan
 *.plan
 
-# tfvars puede tener secrets — usar .tfvars.example como referencia
+# tfvars may contain secrets — use .tfvars.example as reference
 *.tfvars
 *.tfvars.json
 

@@ -1,11 +1,11 @@
 variable "container_name" {
-  description = "Nombre para el contenedor de Nginx"
-  type = string
-  default = "servidor-terraform-lab"
+  description = "Name for the Nginx container"
+  type        = string
+  default     = "terraform-lab-server"
 }
 
 variable "external_port" {
-  description = "Puerto externo para acceder a Nginx"
-  type = number
-  default = 8080
+  description = "External port to access Nginx"
+  type        = number
+  default     = 8080
 }
