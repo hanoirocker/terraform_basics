@@ -19,10 +19,10 @@ resource "docker_image" "nginx" {
 # 2. Crear el contenedor usando esa imagen
 resource "docker_container" "nginx" {
   image = docker_image.nginx.image_id
-  name  = "mi-servidor-web"
+  name  = var.container_name
 
   ports {
     internal = 80
-    external = 8080
+    external = var.external_port
   }
 }
