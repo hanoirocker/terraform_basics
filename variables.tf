@@ -7,5 +7,5 @@ variable "container_name" {
 variable "external_port" {
   description = "External port to access Nginx"
   type        = number
-  default     = 8080
+  default     = 8085
 }
