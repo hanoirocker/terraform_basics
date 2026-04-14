@@ -1,0 +1,56 @@
+# ====================
+# TERRAFORM
+# ====================
+
+.terraform/
+.terraform.lock.hcl
+
+# Estado local — contiene info sensible, no versionar
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Plan files
+*.tfplan
+*.plan
+
+# tfvars puede tener secrets — usar .tfvars.example como referencia
+*.tfvars
+*.tfvars.json
+
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+crash.log
+crash.*.log
+
+# ====================
+# DOCKER
+# ====================
+
+.env
+.env.*
+!.env.example
+
+data/
+volumes/
+
+# ====================
+# GENERAL
+# ====================
+
+.DS_Store
+Thumbs.db
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
