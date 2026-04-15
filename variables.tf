@@ -9,3 +9,15 @@ variable "external_port" {
   type        = number
   default     = 8085
 }
+
+variable "app_title" {
+  description = "Title to display on the Nginx welcome page"
+  type        = string
+  default     = "Welcome to Terraform Lab!"
+}
+
+variable "environment" {
+  description = "Deployment environment (e.g., dev, staging, prod)"
+  type        = string
+  default     = "dev"
+}
