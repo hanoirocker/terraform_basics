@@ -31,4 +31,13 @@ resource "docker_container" "nginx" {
     container_path = "/usr/share/nginx/html/index.html"   # Internal Nginx path
     read_only      = true
   }
+
+  networks_advanced {
+    name = docker_network.private_network.name
+  }
+}
+
+# 3. Private network
+resource "docker_network" "private_network" {
+  name = "private_network_lab"
 }
